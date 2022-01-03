@@ -1,10 +1,11 @@
 import './App.css';
+import { Recipe } from './components/Recipe';
 
 function App() {
     return (
-        <div>
-
-        </div>
+        <>
+            <Recipe />
+        </>
     );
 }
 
