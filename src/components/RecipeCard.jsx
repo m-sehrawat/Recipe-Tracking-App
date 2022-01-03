@@ -17,17 +17,23 @@ const CardBody = ({ item, handleClick, handleDelete }) => {
 };
 
 
-export const RecipeCard = ({ form, handleClick, handleDelete, isCard }) => {
+export const RecipeCard = ({ form, handleClick, handleDelete, isCard, sortLH, sortHL }) => {
 
     if (!isCard) {
         return null;
     }
 
     return (
-        <div className="cardBox boxHeightTop mousePointer">
-            {form.map((item) => {
-                return <CardBody key={item.id} item={item} handleClick={handleClick} handleDelete={handleDelete} />
-            })}
+        <div className="">
+            <div className="input-group my-3">
+                <button onClick={sortLH} className="btn btn-outline-secondary">Sort Low-High</button>
+                <button onClick={sortHL} className="btn btn-outline-secondary">Sort High-Low</button>
+            </div>
+            <div className="cardBox boxHeightTopRight mousePointer">
+                {form.map((item) => {
+                    return <CardBody key={item.id} item={item} handleClick={handleClick} handleDelete={handleDelete} />
+                })}
+            </div>
         </div>
     );
 };

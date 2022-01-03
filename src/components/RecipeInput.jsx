@@ -67,6 +67,30 @@ export const Recipe = () => {
             })
     };
 
+    const sortLH = () => {
+        fetch(`http://localhost:3005/recipe`)
+            .then((res) => res.json())
+            .then((res) => {
+                res.sort((a, b) => a.cookTime - b.cookTime)
+                setForm(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
+    const sortHL = () => {
+        fetch(`http://localhost:3005/recipe`)
+            .then((res) => res.json())
+            .then((res) => {
+                res.sort((a, b) => b.cookTime - a.cookTime)
+                setForm(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
 
     const handleChange = (e) => {
         let { name, value } = e.target;
@@ -107,12 +131,20 @@ export const Recipe = () => {
 
                     </div>
                     <div className="col ">
-                        <RecipeCard form={form} handleClick={handleClick} handleDelete={handleDelete} isCard={isCard} />
+                        <RecipeCard
+                            form={form}
+                            handleClick={handleClick}
+                            handleDelete={handleDelete}
+                            isCard={isCard}
+                            sortLH={sortLH}
+                            sortHL={sortHL} />
                     </div>
                 </div>
                 <div className="row ">
                     <div className="col boxHeightBottom">
-                        <RecipeDetails recipeDetail={recipeDetail} isDetails={isDetails} />
+                        <RecipeDetails
+                            recipeDetail={recipeDetail}
+                            isDetails={isDetails} />
                     </div>
                 </div>
             </div>
