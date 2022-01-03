@@ -6,7 +6,7 @@ const CardBody = ({ item, handleClick, handleDelete }) => {
         <div className="card m-3 shadow">
             <div className="card-body fs-5">
                 <div className="row">
-                    <div onClick={() => handleClick(item)} className="col-10">{title} - {cookTime} </div>
+                    <div onClick={() => handleClick(item)} className="col-10">{title} - {cookTime} Hours </div>
                     <div className="col">
                         <button onClick={() => handleDelete(id)} className="btn btn-sm btn-outline-danger">Delete</button>
                     </div>
