@@ -2,10 +2,8 @@ const CardBody = ({ item, handleClick, handleDelete }) => {
 
     const { title, cookTime, id } = item;
 
-
-
     return (
-        <div  className="card m-3 shadow">
+        <div className="card m-3 shadow">
             <div className="card-body fs-5">
                 <div className="row">
                     <div onClick={() => handleClick(item)} className="col-10">{title} - {cookTime} </div>
@@ -21,18 +19,15 @@ const CardBody = ({ item, handleClick, handleDelete }) => {
 
 export const RecipeCard = ({ form, handleClick, handleDelete, isCard }) => {
 
-    if(!isCard){
+    if (!isCard) {
         return null;
     }
 
     return (
-        <>
-            <div className="cardBox boxHeightTop mousePointer">
-                {form.map((item) => {
-                    return <CardBody key={item.id} item={item} handleClick={handleClick} handleDelete={handleDelete} />
-                })}
-            </div>
-
-        </>
+        <div className="cardBox boxHeightTop mousePointer">
+            {form.map((item) => {
+                return <CardBody key={item.id} item={item} handleClick={handleClick} handleDelete={handleDelete} />
+            })}
+        </div>
     );
 };

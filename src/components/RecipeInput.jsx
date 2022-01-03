@@ -50,7 +50,7 @@ export const Recipe = () => {
             .finally(() => {
                 getData();
             })
-    }
+    };
 
     const handleDelete = (id) => {
         fetch(`http://localhost:3005/recipe/${id}`, {
@@ -65,31 +65,27 @@ export const Recipe = () => {
             .finally(() => {
                 getData();
             })
-    }
+    };
 
 
     const handleChange = (e) => {
         let { name, value } = e.target;
         setRecipeData({ ...recipeData, [name]: value })
-    }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         postData(recipeData);
         setIsCard(true);
-    }
+    };
 
     const handleClick = (data) => {
         setRecipeDetail(data);
         setIsDetails(true);
-    }
-
-
-
+    };
 
 
     return (
-
         <div className='mainBox'>
             <div className="container">
                 <div className="row">
@@ -121,8 +117,5 @@ export const Recipe = () => {
                 </div>
             </div>
         </div>
-
-
-
-    )
-}
+    );
+};

@@ -4,7 +4,7 @@ export const RecipeDetails = ({ recipeDetail, isDetails }) => {
 
     if (!isDetails) {
         return null;
-    }
+    };
 
     return (
         <div className=" shadow mt-4 ms-3 me-4 p-3 overflow-hidden ">
@@ -20,5 +20,5 @@ export const RecipeDetails = ({ recipeDetail, isDetails }) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
