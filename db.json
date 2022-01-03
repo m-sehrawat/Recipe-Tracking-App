@@ -1,20 +1,3 @@
 {
-  "recipe": [
-    {
-      "title": "gfgfh",
-      "ingredients": "gfgf",
-      "cookTime": "ggfg",
-      "imgURL": "gfgf",
-      "instructions": "fgfgf",
-      "id": 1
-    },
-    {
-      "title": "rerer",
-      "ingredients": "fdfdfd",
-      "cookTime": "dfdfdf",
-      "imgURL": "dfdfdf",
-      "instructions": "dfdfd",
-      "id": 2
-    }
-  ]
+  "recipe": []
 }
